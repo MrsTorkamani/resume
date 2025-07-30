@@ -1,24 +1,35 @@
 {
-  "name": "MrAdibResume",
+  "name": "MrsAdibResume",
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "tailwindcss": "4.1.11"
+    "tailwindcss": "latest"
   },
   "keywords": [
     "MrAdib",
     "tailwind",
     "resume"
   ],
-  "author": "Javad Adib",
+  "author": "MrAdib",
   "license": "MIT",
   "devDependencies": {
-    "cssnano": "7.1.0",
-    "postcss": "^8.5.6",
-    "postcss-cli": "11.0.1"
+    "@biomejs/biome": "latest",
+    "cssnano": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest"
   },
   "scripts": {
-    "dev": "NODE_ENV=development npx tailwindcss -i ./style/tailwind.css -o ./style/style.css --watch",
-    "build": "NODE_ENV=production npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify"
+    "dev1": "NODE_ENV=development npx tailwindcss -i ./style/tailwind.css -o ./style/style.css --watch",
+    "build1": "NODE_ENV=production npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify",
+    "dev": "npm run build",
+		"prebuild": "open ./index.html",
+		"build": "npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify",
+		"check": "biome check",
+		"check:fix": "biome check --write",
+		"format": "biome format .",
+		"format:fix": "biome format . --write",
+		"lint": "biome lint",
+		"lint:fix": "biome lint --fix",
+		"lint:fix:unsafe": "biome lint --fix --unsafe"
   }
 }
