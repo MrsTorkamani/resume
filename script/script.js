@@ -54,7 +54,7 @@ function getResumeLatestPdfVersion() {
 
 function getPdfLink(resumeVersion) {
 	const folderPath = "./pdf/";
-	const resumeFilePrefix = "MrAdib-Resume-";
+	const resumeFilePrefix = "Sara-Torkamani-CV-";
 	const pdfLink = `${folderPath}${resumeFilePrefix}${resumeVersion}.pdf`;
 	return pdfLink;
 }
@@ -157,7 +157,7 @@ showPdfButton();
 
 window.addEventListener("beforeprint", () => {
 	window.originalTitle = document.title;
-	let documentTitle = `MrAdib-Resume-${getResumeVersion()}`;
+	let documentTitle = `Sara-Torkamani-CV-${getResumeVersion()}`;
 	if (!isLocalFile()) {
 		documentTitle += "-web";
 	}
